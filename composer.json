@@ -1,0 +1,14 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Game\\": "lib/Game"
+    }
+  },
+  "require": {
+    "phpunit/phpunit": "6",
+    "ext-pdo": "*",
+    "ext-openssl": "*",
+    "ext-json": "*",
+    "ext-sockets": "*"
+  }
+}

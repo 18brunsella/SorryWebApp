@@ -1,0 +1,11 @@
+//user table
+CREATE TABLE p2_user (id int(11) NOT NULL AUTO_INCREMENT, email varchar(200) NOT NULL, username varchar(20) NOT NULL, password varchar(64) NOT NULL, joined datetime NOT NULL, salt char(16) NOT NULL, PRIMARY KEY (id), UNIQUE INDEX (email));
+//validator table
+CREATE TABLE p2_validator (validator char(32) NOT NULL, userid int(11) NOT NULL, `date` datetime NOT NULL, PRIMARY KEY (validator), INDEX (userid));
+//game table
+CREATE TABLE p2_game (id char(32) NOT NULL AUTO_INCREMENT, player0 int(11) NOT NULL, player1 int(11), player2 int(11), player3 int(11), gameState mediumtext NOT NULL, turn int(11) NOT NULL, status int(11) NOT NULL, PRIMARY KEY (id));
+//game table
+CREATE TABLE p2_game (id int(11) NOT NULL AUTO_INCREMENT, player0 int(11) NOT NULL, player1 int(11), player2 int(11), player3 int(11), gameState mediumtext NOT NULL, turn int(11) NOT NULL, status int(11) NOT NULL, PRIMARY KEY (id));
+
+
+CREATE TABLE game (id varchar(32) NOT NULL, player0 int(11) NOT NULL, player1 int(11), player2 int(11), player3 int(11), gameState mediumtext, turn int(11) NOT NULL, status char(11) NOT NULL, PRIMARY KEY (id));

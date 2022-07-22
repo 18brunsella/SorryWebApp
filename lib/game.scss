@@ -1,0 +1,317 @@
+html, body, header, footer, hgroup, nav, article, section, figure,
+figcaption, h1, h2, h3, ul, li, body, div, p, img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  background-image: url("../images/background.png");
+  background-size: 100% 100%;
+}
+
+form {
+  display: block;
+  text-align: center;
+}
+
+div.game {
+  display: inline-block;
+  position: relative;
+  margin: 1em auto;
+  width: 96vw;
+  height: 96vw;
+  max-width: 1024px;
+  max-height: 1024px;
+  border: 0;
+  box-sizing: border-box;
+  padding: 0;
+
+  background-image: url("../images/sorryboard.png");
+  background-size: 100% 100%;
+}
+
+div.game > div.board {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.game div.row {
+  display: flex;
+  flex: 1 1 auto;
+  padding: 0;
+  width: 100%;
+  height: 6.25%;
+  min-height: 6.25%;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+div.game div.cell {
+  flex: 1 0 6.25%;
+  vertical-align: top;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+table, tr, th, td {
+  border: 1px solid black;
+}
+
+div.cell button {
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00ff0033;
+}
+
+.piece {
+
+  vertical-align: top;
+  padding: 0;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+input[name="cell"] {
+  flex: 1 0 6.25%;
+  vertical-align: top;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.main {
+  background-color: white;
+  text-align: center;
+  width: 900px;
+  padding-bottom: 50px;
+  padding-top: 40px;
+}
+
+div.main, header {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, sans-serif;
+}
+
+div.main h1 {
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div.main a {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+div.main p.instruct {
+  font-size: 1em;
+  text-align: left;
+  margin: 15px;
+}
+
+div.main form p.player {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 1em;
+  padding: 0;
+}
+
+div.game-over-modal {
+  background-color: rgb(226, 239, 218);
+  position: absolute;
+  width: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.3em;
+  top: 260px;
+  left: 260px;
+  right: 260px;
+  bottom: 260px;
+
+}
+
+p.game-over-text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+p.player-win {
+  font-family: Arial, sans-serif;
+  text-decoration: underline;
+}
+
+.lobbypawns {
+  filter: grayscale(100%);
+}
+
+#gameNewGame {
+  width: fit-content;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1em;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: rgb(236, 28, 36);
+  position: center;
+}
+
+#gameBack {
+  width: fit-content;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1em;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: rgb(236, 28, 36);
+}
+
+header {
+  background-color: lightgrey;
+  height: 150px;
+  width: 900px;
+  text-align: center;
+}
+
+header h1 {
+  color: black;
+  font-size: 80px;
+  padding-top: 20px;
+}
+
+header p {
+  float: right;
+  margin-right: 0.33em;
+  margin-top: 0.1em;
+}
+
+p.turn {
+  font-family: Arial, sans-serif;
+  left: 350px;
+  top: 300px;
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+}
+
+#cardBack {
+  left: 284px;
+  top: 383px;
+  position: absolute;
+}
+
+#discard {
+  left: 540px;
+  top: 383px;
+  position: absolute;
+}
+
+#drawButton {
+  width: fit-content;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1em;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: rgb(236, 28, 36);
+  left: 490px;
+  top: 650px;
+  position: absolute;
+}
+
+#resetButton {
+  width: fit-content;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1em;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: rgb(236, 28, 36);
+  left: 435px;
+  top: 700px;
+  position: absolute;
+}
+
+#doneButton {
+  width: fit-content;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1em;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: rgb(236, 28, 36);
+  left: 375px;
+  top: 650px;
+  position: absolute;
+}
+
+#grayedDraw {
+  width: fit-content;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1em;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: gray;
+  left: 490px;
+  top: 650px;
+  position: absolute;
+}
+
+#grayedDone {
+  width: fit-content;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1em;
+  font-size: 2em;
+  font-weight: bold;
+  background-color: gray;
+  left: 375px;
+  top: 650px;
+  position: absolute;
+}
+
+button[name="cell"],
+img#card {
+  cursor: pointer;
+}
+
+p.error {
+  margin-top: 15px;
+  color: #ec1c24;
+  font-weight: bold;
+  font-style: italic;
+}
+
+table#games {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+
+  td, th {
+    padding: 4px 8px 4px 8px;
+  }
+}
+
+.buttons {
+  margin-top: 40px;
+}
+
+.disabled {
+  opacity: 40%;
+}
